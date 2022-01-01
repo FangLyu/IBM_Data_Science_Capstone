@@ -96,14 +96,14 @@ def success_payload_scatter_chart(entered_site, payload_range):
                 x='Payload Mass (kg)',
                 y='class',
                 color='Booster Version Category',
-                title='Total Success Launches By Site')
+                title=f'Correlation between Payload and Success for Site {entered_site}')
         return fig
     else:
         fig = px.scatter(spacex_df.loc[(spacex_df['Launch Site']==entered_site)&payload_filter,:], 
                 x='Payload Mass (kg)',
                 y='class',
                 color='Booster Version Category',
-                title='Total Success Launches By Site')
+                title=f'Correlation between Payload and Success for Site {entered_site}')
         return fig
 
 
